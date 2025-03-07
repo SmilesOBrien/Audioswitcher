@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Define the card identifier (ex: alsa_card.pci-0000_00_1f.3)
-card_identifier="indentifier_here"
+# Define the card identifier
+card_identifier= # Put indentifier here (ex: alsa_card.pci-0000_00_1f.3)
 
 # Define the two profiles
-profile1="profile_1_here" # Headphones (ex: output:analog-stereo+input:analog-stereo)
-profile2="profile_2_here" # Speakers (ex: output:iec958-stereo+input:analog-stereo)
+profile1= # Headphones (ex: output:analog-stereo+input:analog-stereo)
+profile2= # Speakers (ex: output:iec958-stereo+input:analog-stereo)
 
 # Get the current active profile (using the identifier)
 current_profile=$(pactl list cards | grep "$card_identifier" -A 100 | grep "Active Profile" | awk '{print $3}')
